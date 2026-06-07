@@ -1,0 +1,64 @@
+# Desktop Fishy Tank — bug report form for the AnhysbysProjects/support repo.
+# Owner: copy this file VERBATIM into the repo as
+#   .github/ISSUE_TEMPLATE/fishy-tank-bug.yml
+# (steps in docs/github_support_setup.txt). The in-game "Report a bug"
+# button opens this repo's issue chooser.
+name: Desktop Fishy Tank — bug report
+description: Something broke in Desktop Fishy Tank? Tell us here — it helps every player.
+title: "[Fishy Tank] "
+labels:
+  - desktop-fishy-tank
+  - bug
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead?
+      placeholder: e.g. After waking my PC from sleep, the fish windows were gone but the pearl was still there.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we make it happen? Best guess is fine.
+      placeholder: |
+        1. Start the game
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      description: On Linux, please also name your desktop environment (GNOME, KDE, XFCE, ...) in the diagnostics box below if you know it.
+      options:
+        - Windows 11
+        - Windows 10
+        - Linux — GNOME
+        - Linux — KDE Plasma
+        - Linux — other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: >
+        In the game, open Help (the "?" button in the toolbar), press
+        "Copy diagnostics", and paste here. If the game won't start, paste the
+        boot_diag.txt file instead — Windows:
+        %APPDATA%\Godot\app_userdata\Desktop Fishy Tank\boot_diag.txt —
+        Linux: ~/.local/share/godot/app_userdata/Desktop Fishy Tank/boot_diag.txt
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Optional — drag images here if they help show the problem.
+    validations:
+      required: false
